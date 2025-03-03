@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Rock, Paper, Scissors</title>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_box">
+        <div>
+          <img src="images/logo.svg" alt="" class="option" />
+        </div>
+        <div class="score_box">
+          <h1 class="score_1">SCORE</h1>
+          <h1 id="score" class="score_2">0</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="triangle-container">
+      <img src="images/bg-triangle.svg" alt="" class="" />
+      <button
+        type="submit"
+        value="paper"
+        class="btn btn-paper"
+        data-choice="paper"
+      >
+        <div class="img_box">
+          <img class="img" src="images/icon-paper.svg" alt="" />
+        </div>
+      </button>
+      <button
+        type="submit"
+        value="scissors"
+        class="btn btn-scissors"
+        data-choice="scissors"
+      >
+        <div class="img_box">
+          <img class="img" src="images/icon-scissors.svg" alt="" />
+        </div>
+      </button>
+      <button
+        type="submit"
+        value="rock"
+        class="btn btn-rock"
+        data-choice="rock"
+      >
+        <div class="img_box">
+          <img class="img" src="images/icon-rock.svg" alt="" />
+        </div>
+      </button>
+    </div>
+
+    <div class="player-container">
+      <div class="player-sub_container">
+        <div class="player player_1">
+          <h1>You Picked</h1>
+          <button type="submit" value="" id="" class="btn-picked btn-u--picked">
+            <div class="img_box">
+              <img class="img" src="images/icon-paper.svg" alt="" />
+            </div>
+          </button>
+        </div>
+
+        <div class="result">
+          <h1 id="result"></h1>
+          <button type="submit" value="" id="reset" class="btn-result">
+            Play Again
+          </button>
+        </div>
+
+        <div class="player player_2">
+          <h1>The House Picked</h1>
+          <button type="submit" value="" class="btn-picked btn-u--picked">
+            <div class="img_box">
+              <img class="img" src="images/icon-paper.svg" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn-rules">Rules</button>
+    <!-- <div class="rules">
+      <div class="rules-box">
+        <div>
+          <h1>Rules</h1>
+          <img src="./images/icon-close.svg" alt="close-btn" srcset="" />
+        </div>
+        <img src="./images/image-rules.svg" alt="rules" srcset="" />
+      </div>
+    </div> -->
+    <!--* After picking in one option -->
+    <!-- <div class="chosen-area">
+      <div class="chosen">
+      <div class="player_1">
+        <h1 class="player_1">You Pick</h1>
+        <div class="pape opt1">
+          <img class="img" src="images/icon-paper.svg" alt="" />
+        </div>
+      </div>
+      <div class="player_2">
+        <h1 class="player_2">The House Picked</h1>
+        <div class="dot"></div>
+      </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
