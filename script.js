@@ -102,4 +102,22 @@ reset.addEventListener('click', () => {
   result_container.style.transition = 'all 0.6s ease-in';
 });
 
-btn - rules.addEventListener('click', (e) => {});
+const rulesBtn = document.querySelector('.btn-rules'); // Ensure this ID is correct
+const closeBtn = document.querySelector('.close');
+const overlay = document.querySelector('.overlay');
+const rulesModal = document.querySelector('.rules');
+
+// Function to toggle the modal
+const toggleRules = () => {
+  rulesModal.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
+};
+
+// Open rules modal
+rulesBtn.addEventListener('click', toggleRules);
+
+// Close when clicking the close button
+closeBtn.addEventListener('click', toggleRules);
+
+// Close when clicking outside the modal (on overlay)
+overlay.addEventListener('click', toggleRules);

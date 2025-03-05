@@ -29,6 +29,8 @@ body {
 
   color: white;
   font-family: "Barlow Semi Condensed";
+
+  position: relative;
 }
 
 .header{
@@ -149,21 +151,6 @@ body {
 }
 .btn-rock:active{
   transform: scale(.9);
-}
-
-.btn-rules{
-    color: white;
-    background-color: transparent;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: inherit;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    border: 1px solid white;
-    border-radius: .5rem;
-    padding: .5rem 3.5rem;
-    float: right;
-    margin: 1rem;
 }
 
 .chosen-area{
@@ -328,18 +315,84 @@ body {
     }
 }
 
-.rules-box{
-    background-color: #fff;
-    display: flex;
+/* Rules */
+
+.btn-rules{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    border-radius: .5rem;
+    padding: .5rem 3.5rem;
+    float: right;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.overlay{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 50;
+}
+.rules{
+    /* display: none; */
     align-items: center;
     justify-content: center;
 
-    width: 50rem;
-    height: 40rem;
-    border-radius: 1rem;
+    /* position: relative;
+    top: 0; */
 }
 
+.rules-box{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    width: 35rem;
+    height: 35rem;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    z-index: 100;
+}
+.rules-box .img-box{
+    padding: 2rem 2rem;
+}
+.rules-box .rules-img{
+    width: 100%;
+    height: 100%;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+
+    margin-bottom: 1rem;
+}
+.rules-box .flex h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--Dark_Text);
+}
+.close{
+    cursor: pointer;
+}
 
 .attribution {
   font-size: 11px;
